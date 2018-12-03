@@ -3,7 +3,11 @@ project for training our new backend developer .
 
 ## Requirment 
 ### Delivery Service
-
+ - ผู้ใช้สามารถเข้ามาประกาศขายลำไยได้
+ - ผู้ใช้สามารถเข้ามาหาซื้อลำไยได้
+ - ผู้ใช้สามารถ Filter ข้อมูลได้
+ - ผู้ใช้สามารถดูประวัติการซื้อลำไยได้
+ - ผู้ใช้สามารถเลือกซื้อลำไยที่ต้องการได้
 
 ## Training Checklist 
  - [ ] Set stack and Design database
