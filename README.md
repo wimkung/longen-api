@@ -10,17 +10,18 @@ project for training our new backend developer .
  - ผู้ใช้สามารถเลือกซื้อลำไยที่ต้องการได้
 
 ## Training Checklist 
- - [ ] Set stack and Design database
+ - [x] Set stack and Design database
  - [ ] Basic restful api service without connect database
  - [ ] Connect and Access to database
  - [ ] App Structure
  - [ ] Deployment
  
 ## Stack
-//
-
+ - Hapi
+ - Mongoose
+ 
 ## ER-Diagram
-//
+![Alt text](ER/Longen-ER.png?raw=true "ER diagram")
 
 
 ## API End points
