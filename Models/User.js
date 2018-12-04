@@ -5,7 +5,7 @@ const UserSchema = new Schema({
     username: String,
     firstName: String,
     lastName: String,
-    longens: [{ type: Schema.Types.ObjectId, ref: 'Longen'}],
+    longens: [{ type: Schema.Types.ObjectId, ref: 'longens'}],
 });
 
-module.exports = mongoose.model('User', UserSchema);
+module.exports = mongoose.model('users', UserSchema);
