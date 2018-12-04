@@ -1,14 +1,33 @@
+const Joi = require('joi');
 const UserController = require('./Controllers/UserController');
 
 module.exports = [
     {
         method: 'GET',
         path: '/user',
-        handler: UserController.listUser,
+        options: {
+            handler: UserController.listUser,
+            description: 'Get All users.',
+            tags: ['api', 'user'],
+        },
+
     },
     {
         method: 'POST',
         path: '/user',
-        handler: UserController.createUser,
+        options: {
+            handler: UserController.createUser,
+            description: 'Create new user.',
+            tags: ['api', 'user'],
+            validate: {
+                payload: {
+                    username: Joi.string().required(),
+                    firstName: Joi.string().required(),
+                    lastName: Joi.string().required(),
+
+                }
+            }
+        },
+
     }
 ];

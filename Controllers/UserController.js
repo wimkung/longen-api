@@ -1,17 +1,19 @@
 const User = require('../Models/User');
 
-exports.listUser = function (req, h) {
-    const users = User.find();
+exports.listUser = async function (req, h) {
+    const users = await User.find();
 
     return users;
 };
 
 exports.createUser = async function (req, h) {
-    let user = User.findOne({name: req.payload.name});
+    let user = await User.findOne({username: req.payload.username});
 
     if (user == null){
         user = new User();
-        user.name = req.payload.name;
+        user.username = req.payload.username;
+        user.firstName = req.payload.firstName;
+        user.lastName = req.payload.lastName;
         await user.save();
     }
 
