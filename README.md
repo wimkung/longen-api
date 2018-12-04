@@ -13,12 +13,12 @@ project for training our new backend developer .
  - [x] Set stack and Design database
  - [ ] Basic restful api service without connect database
  - [ ] Connect and Access to database
- - [ ] App Structure
+ - [x] App Structure
  - [ ] Deployment
  
 ## Stack
  - Hapi
- - Mongoose
+ - MongoDB
  
 ## ER-Diagram
 ![Alt text](ER/Longen-ER.png?raw=true "ER diagram")
