@@ -8,7 +8,7 @@ const LongenSchema = new Schema({
     price: Number,
     long: Number,
     lat: Number,
-    status: Boolean,
+    status: {type: Boolean, default: true},
 }, {
     timestamp: true,
 });
