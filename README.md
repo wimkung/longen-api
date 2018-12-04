@@ -19,7 +19,6 @@ project for training our new backend developer .
 ## Stack
  - Hapi
  - Mongoose
- - JOI validation
  
 ## ER-Diagram
 ![Alt text](ER/Longen-ER.png?raw=true "ER diagram")
