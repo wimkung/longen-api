@@ -20,7 +20,7 @@ project for training our new backend developer .
 //
 
 ## ER-Diagram
-![Alt text](wim-backend-training/ER/Longen-ER.png?raw=true "Title")
+![Alt text](ER/Longen-ER.png?raw=true "Title")
 
 
 ## API End points
