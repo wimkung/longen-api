@@ -11,8 +11,8 @@ project for training our new backend developer .
 
 ## Training Checklist 
  - [x] Set stack and Design database
- - [ ] Basic restful api service without connect database
- - [ ] Connect and Access to database
+ - [x] Connect and Access to database
+ - [x] Basic restful api service without connect database
  - [x] App Structure
  - [ ] Deployment
  
