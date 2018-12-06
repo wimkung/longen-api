@@ -22,7 +22,7 @@ exports.show = async function (req, h) {
     if (!longen){
         let data = {msg: 'Longen find not found.'};
 
-        return h.response(data).code(422);
+        return h.response(data).code(404);
     }
 
     return longen;
@@ -34,7 +34,7 @@ exports.create = async function (req, h) {
     if (!user){
         let data = {msg: 'User find not found.'};
 
-        return h.response(data).code(422);
+        return h.response(data).code(404);
     }
 
     let longen = new Longen();
@@ -55,7 +55,7 @@ exports.update = async function (req, h) {
     if (!user){
         let data = {msg: 'User find not found.'};
 
-        return h.response(data).code(422);
+        return h.response(data).code(404);
     }
 
     let longen = await Longen.findOne({_id: req.payload.longen_id, owner: user._id, status: true});
@@ -63,7 +63,7 @@ exports.update = async function (req, h) {
     if (!longen){
         let data = {msg: 'Longen find not found.'};
 
-        return h.response(data).code(422);
+        return h.response(data).code(404);
     }
 
     longen.address = req.payload.address;
@@ -82,7 +82,7 @@ exports.delete = async function (req, h) {
     if (!user){
         let data = {msg: 'User find not found.'};
 
-        return h.response(data).code(422);
+        return h.response(data).code(404);
     }
 
     let longen = await Longen.deleteOne({_id: req.params.longen_id, owner: user._id});
@@ -90,7 +90,7 @@ exports.delete = async function (req, h) {
     if (longen.n != 1){
         let data = {msg: 'Longen find not found.'};
 
-        return h.response(data).code(422);
+        return h.response(data).code(404);
     }
 
     let data = {msg: 'Longen deleted.'};

@@ -8,7 +8,7 @@ exports.list = async function (req, h) {
     if (!user){
         let data = {msg: 'User find not found.'};
 
-        return h.response(data).code(422);
+        return h.response(data).code(404);
     }
 
     const transactions = await Transaction.find({buyer: user._id}).populate('longen');
@@ -22,7 +22,7 @@ exports.create = async function (req, h) {
     if (!user){
         let data = {msg: 'User find not found.'};
 
-        return h.response(data).code(422);
+        return h.response(data).code(404);
     }
 
     let longen = await Longen.findOne({_id: req.payload.longen_id, status: true});
@@ -30,7 +30,7 @@ exports.create = async function (req, h) {
     if (!longen){
         let data = {msg: 'Longen find not found.'};
 
-        return h.response(data).code(422);
+        return h.response(data).code(404);
     }
 
     let transaction = new Transaction();
