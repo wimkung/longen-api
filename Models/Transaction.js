@@ -5,7 +5,7 @@ const TransactionSchema = new Schema({
     buyer: { type: Schema.Types.ObjectId, ref: 'users'},
     longen: { type: Schema.Types.ObjectId, ref: 'longens'},
 }, {
-    timestamp: true,
+    timestamps: true,
 });
 
 module.exports = mongoose.model('transactions', TransactionSchema);

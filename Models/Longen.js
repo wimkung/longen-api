@@ -10,7 +10,7 @@ const LongenSchema = new Schema({
     lat: Number,
     status: {type: Boolean, default: true},
 }, {
-    timestamp: true,
+    timestamps: true,
 });
 
 module.exports = mongoose.model('longens', LongenSchema);

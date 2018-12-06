@@ -1,8 +1,10 @@
 const Joi = require('joi');
 const UserController = require('./Controllers/UserController');
 const LonggenController = require('./Controllers/LongenController');
+const TrnasactionController = require('./Controllers/TransactionController');
 
 module.exports = [
+    //User
     {
         method: 'GET',
         path: '/user',
@@ -31,6 +33,8 @@ module.exports = [
         },
 
     },
+
+    //Longen
     {
         method: 'GET',
         path: '/longen',
@@ -99,6 +103,7 @@ module.exports = [
         options: {
             handler: LonggenController.delete,
             description: 'Delete longen by object id and username.',
+            tags: ['api', 'longen'],
             validate: {
                 params: {
                     longen_id: Joi.string().required(),
@@ -106,5 +111,36 @@ module.exports = [
                 }
             }
         }
-    }
+    },
+
+    //Transaction
+    {
+        method: 'GET',
+        path: '/transaction/{username}',
+        options: {
+            handler: TrnasactionController.list,
+            description: 'List transaction by username.',
+            tags: ['api', 'transaction'],
+            validate: {
+                params: {
+                    username: Joi.string().required(),
+                }
+            }
+        }
+    },
+    {
+        method: 'POST',
+        path: '/transaction',
+        options: {
+            handler: TrnasactionController.create,
+            description: 'Create transaction.',
+            tags: ['api', 'transaction'],
+            validate: {
+                payload: {
+                    username: Joi.string().required(),
+                    longen_id: Joi.string().required(),
+                }
+            }
+        }
+    },
 ];
