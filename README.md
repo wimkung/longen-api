@@ -25,4 +25,4 @@ project for training our new backend developer .
 
 
 ## API End points
-//
+http://localhost:8000/documentation
