@@ -19,7 +19,7 @@ module.exports = shipit => {
     dev: {
       servers: '20scoops@jisack.com',
       key: '~/.ssh/wim_dev',
-      deployTo: '~/wim-project',
+      deployTo: '/home/20scoops/wim-project',
       branch: 'master'
     }
   });

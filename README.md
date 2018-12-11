@@ -14,7 +14,7 @@ project for training our new backend developer .
  - [x] Connect and Access to database
  - [x] Basic restful api service without connect database
  - [x] App Structure
- - [ ] Deployment
+ - [x] Deployment
  
 ## Stack
  - Hapi
