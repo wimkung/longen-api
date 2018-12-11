@@ -1,16 +1,19 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const LongenSchema = new Schema({
-    owner: { type: Schema.Types.ObjectId, ref: 'users'},
+const LongenSchema = new Schema(
+  {
+    owner: { type: Schema.Types.ObjectId, ref: 'users' },
     address: String,
     amount: Number,
     price: Number,
     long: Number,
     lat: Number,
-    status: {type: Boolean, default: true},
-}, {
-    timestamps: true,
-});
+    status: { type: Boolean, default: true }
+  },
+  {
+    timestamps: true
+  }
+);
 
 module.exports = mongoose.model('longens', LongenSchema);
