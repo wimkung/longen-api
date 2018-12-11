@@ -4,12 +4,21 @@
   "description": "project for training our new backend developer .",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint index.js --color",
+    "format": "eslint --fix",
+    "prettier": "prettier --write './**/*.js'",
+    "prettier:check": "prettier --list-different './**/*.js'",
+    "prettier-changefiles": "pretty-quick --staged",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/20Scoops-CNX/wim-backend-training.git"
   },
+  "pre-commit": [
+    "lint",
+    "prettier"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {
@@ -26,6 +35,14 @@
     "vision": "^5.4.3"
   },
   "devDependencies": {
-    "eslint": "^5.10.0"
+    "eslint": "^5.10.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "pre-commit": "^1.2.2",
+    "prettier": "^1.14.3"
   }
 }
