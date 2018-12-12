@@ -23,7 +23,7 @@ module.exports = [
       tags: ['api', 'user'],
       validate: {
         params: {
-          user_id: Joi.string().required(),
+          user_id: Joi.string().required()
         }
       }
     }

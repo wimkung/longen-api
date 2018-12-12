@@ -7,11 +7,13 @@ exports.listUser = async function(req, h) {
 };
 
 exports.showUser = async function(req, h) {
-  const user = await User.findOne({ _id: req.params.user_id }).populate('longens');
-  if (!user){
+  const user = await User.findOne({ _id: req.params.user_id }).populate(
+    'longens'
+  );
+  if (!user) {
     let data = {
-      msg: 'User find not found.',
-    }
+      msg: 'User find not found.'
+    };
 
     return h.responce(data).code(404);
   }
