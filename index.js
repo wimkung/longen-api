@@ -8,7 +8,7 @@ const Pack = require('./package');
 require('./database');
 
 const server = hapi.server({
-  host: 'localhost',
+  host: '0.0.0.0',
   port: process.env.PORT || 8000,
   routes: {
     cors: {
