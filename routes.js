@@ -15,6 +15,20 @@ module.exports = [
     }
   },
   {
+    method: 'GET',
+    path: '/user/{user_id}',
+    options: {
+      handler: UserController.showUser,
+      description: 'Get user by id.',
+      tags: ['api', 'user'],
+      validate: {
+        params: {
+          user_id: Joi.string().required()
+        }
+      }
+    }
+  },
+  {
     method: 'POST',
     path: '/user',
     options: {

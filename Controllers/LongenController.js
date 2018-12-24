@@ -48,6 +48,9 @@ exports.create = async function(req, h) {
   longen.price = req.payload.price;
   await longen.save();
 
+  user.longens.push(longen);
+  await user.save();
+
   return longen;
 };
 
