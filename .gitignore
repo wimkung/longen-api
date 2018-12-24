@@ -6,3 +6,5 @@
 node_modules/
 
 shipit/config\.js
+
+\.env
