@@ -4,6 +4,7 @@
   "description": "project for training our new backend developer .",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "lint": "eslint index.js --color",
     "format": "eslint --fix",
     "prettier": "prettier --write './**/*.js'",
