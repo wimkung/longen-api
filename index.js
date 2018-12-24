@@ -9,10 +9,10 @@ require('./database');
 
 const server = hapi.server({
   host: 'localhost',
-  port: 8000,
+  port: process.env.PORT || 8000,
   routes: {
     cors: {
-      origin: ['http://localhost:3002']
+      origin: ['*']
     }
   }
 });
